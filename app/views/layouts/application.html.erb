@@ -1,0 +1,25 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <title>TRANSPORTADORA</title>
+    <%= stylesheet_link_tag :all %>
+    <%= javascript_include_tag "jquery", "jquery-rails", "application", "jquery.maskedinput-1.2.2.min" %>
+	<%= csrf_meta_tag %>
+	<%= yield :script %>
+</head>
+<body>
+<div id="top_container">
+	<div id="menu">
+    	<ul>
+       	<li><a href="/entregas">Entregas</a></li>
+       	<li><a href="/motoristas">Motoristas</a></li>
+		    <li><a href="/clientes">Clientes</a></li>
+      </ul>
+    </div>    
+</div>
+<div id="container">
+	<%= yield %>
+</div>
+</body>
+</html>
+

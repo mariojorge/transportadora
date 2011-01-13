@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin: 0px 0px 0px 0px;
+}
+
+#top_container {
+	background-color: #000;
+	color:#FFF;
+}
+
+#menu {
+	padding-left: 15px;	
+}
+
+#menu ul {
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	list-style: none;
+}
+
+#menu ul li {
+	display: inline;
+	line-height: 35px;
+	margin-left: 10px;
+	margin-right: 10px;	
+}
+
+#menu ul li a {
+	text-align:center;
+	width: 120px;
+	color: #FFF;
+}
+
+#menu ul li a:hover {
+	color:#999;
+}
+
+.user_logged {
+	color: #F00;	
+}
+
+#container {
+	margin: 10px;	
+}

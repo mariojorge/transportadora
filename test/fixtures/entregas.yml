@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  cliente_id: 1
+  motorista_id: 1
+  cidade_id: 1
+  data_da_partida: 2011-01-10
+  data_da_entrega: 2011-01-10
+  date_do_retorno: 2011-01-10
+
+two:
+  cliente_id: 1
+  motorista_id: 1
+  cidade_id: 1
+  data_da_partida: 2011-01-10
+  data_da_entrega: 2011-01-10
+  date_do_retorno: 2011-01-10

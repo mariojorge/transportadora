@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  ufd_id: 1
+  codigo_ibge: MyString
+  nome: MyString
+
+two:
+  ufd_id: 1
+  codigo_ibge: MyString
+  nome: MyString

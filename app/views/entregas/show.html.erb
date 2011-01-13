@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Cliente:</b>
+  <%= @entrega.cliente_id %>
+</p>
+
+<p>
+  <b>Motorista:</b>
+  <%= @entrega.motorista_id %>
+</p>
+
+<p>
+  <b>Cidade:</b>
+  <%= @entrega.cidade_id %>
+</p>
+
+<p>
+  <b>Data da partida:</b>
+  <%= @entrega.data_da_partida %>
+</p>
+
+<p>
+  <b>Data da entrega:</b>
+  <%= @entrega.data_da_entrega %>
+</p>
+
+<p>
+  <b>Date do retorno:</b>
+  <%= @entrega.data_do_retorno %>
+</p>
+
+
+<%= link_to 'Edit', edit_entrega_path(@entrega) %> |
+<%= link_to 'Back', entregas_path %>

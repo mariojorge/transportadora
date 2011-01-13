@@ -1,0 +1,33 @@
+<h1>Listing entregas</h1>
+
+<table>
+  <tr>
+    <th>Cliente</th>
+    <th>Motorista</th>
+    <th>Cidade</th>
+    <th>Data da partida</th>
+    <th>Data da entrega</th>
+    <th>Date do retorno</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @entregas.each do |entrega| %>
+  <tr>
+    <td><%= entrega.cliente_id %></td>
+    <td><%= entrega.motorista_id %></td>
+    <td><%= entrega.cidade_id %></td>
+    <td><%= entrega.data_da_partida %></td>
+    <td><%= entrega.data_da_entrega %></td>
+    <td><%= entrega.data_do_retorno %></td>
+    <td><%= link_to 'Show', entrega %></td>
+    <td><%= link_to 'Edit', edit_entrega_path(entrega) %></td>
+    <td><%= link_to 'Destroy', entrega, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Entrega', new_entrega_path %>

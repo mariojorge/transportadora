@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @motorista.nome %>
+</p>
+
+<p>
+  <b>Telefone:</b>
+  <%= @motorista.telefone %>
+</p>
+
+
+<%= link_to 'Edit', edit_motorista_path(@motorista) %> |
+<%= link_to 'Back', motoristas_path %>

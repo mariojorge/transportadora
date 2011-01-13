@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  codigo_ibge: MyString
+  sigla: MyString
+  nome: MyString
+
+two:
+  codigo_ibge: MyString
+  sigla: MyString
+  nome: MyString

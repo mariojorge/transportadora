@@ -1,3 +1,5 @@
+<% content_for(:head){javascript_include_tag "form"}%>
+
 <%= form_for(@cliente) do |f| %>
   <% if @cliente.errors.any? %>
     <div id="error_explanation">
@@ -10,11 +12,7 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :cidade_id %><br />
-    <%= f.text_field :cidade_id %>
-  </div>
+  
   <div class="field">
     <%= f.label :nome_fantasia %><br />
     <%= f.text_field :nome_fantasia %>
@@ -27,6 +25,17 @@
     <%= f.label :cnpj %><br />
     <%= f.text_field :cnpj %>
   </div>
+
+  <div class="field">  
+    <%= f.label "Estado" %><br />
+    <%= f.collection_select :ufd_id, Ufd.all, :id, :nome, {:prompt => "Selecione um estado"} %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cidade_id %><br />
+    <%= @cliente.new_record? ? (raw "<select id='cliente_cidade_id' name='cliente[cidade_id]' type='text'/></select>") :(f.collection_select :cidade_id, @cliente.ufd.try(:cidades), :id, :nome) %>
+  </div>
+  
   <div class="field">
     <%= f.label :endereco %><br />
     <%= f.text_field :endereco %>

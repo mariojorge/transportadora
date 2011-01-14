@@ -2,8 +2,10 @@
 
 <table>
   <tr>
+    <th>Id</th>
     <th>Cliente</th>
     <th>Motorista</th>
+    <th>Estado</th>
     <th>Cidade</th>
     <th>Data da partida</th>
     <th>Data da entrega</th>
@@ -15,9 +17,11 @@
 
 <% @entregas.each do |entrega| %>
   <tr>
-    <td><%= entrega.cliente_id %></td>
-    <td><%= entrega.motorista_id %></td>
-    <td><%= entrega.cidade_id %></td>
+    <td><%= entrega.id %></td>
+    <td><%= entrega.cliente.nome_fantasia %></td>
+    <td><%= entrega.motorista.nome %></td>
+    <td><%= entrega.cidade.ufd.nome %></td>
+    <td><%= entrega.cidade.nome%></td>
     <td><%= entrega.data_da_partida %></td>
     <td><%= entrega.data_da_entrega %></td>
     <td><%= entrega.data_do_retorno %></td>

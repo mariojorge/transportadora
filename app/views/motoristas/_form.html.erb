@@ -1,3 +1,4 @@
+<% content_for(:head){javascript_include_tag "form"}%>
 <%= form_for(@motorista) do |f| %>
   <% if @motorista.errors.any? %>
     <div id="error_explanation">

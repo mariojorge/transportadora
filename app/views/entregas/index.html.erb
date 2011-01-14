@@ -1,4 +1,6 @@
-<h1>Listing entregas</h1>
+<h1>Lista de Entregas</h1>
+
+<%= link_to 'Nova Entrega', new_entrega_path %><br />
 
 <table>
   <tr>
@@ -21,13 +23,11 @@
     <td><%= entrega.data_da_partida %></td>
     <td><%= entrega.data_da_entrega %></td>
     <td><%= entrega.data_do_retorno %></td>
-    <td><%= link_to 'Show', entrega %></td>
-    <td><%= link_to 'Edit', edit_entrega_path(entrega) %></td>
-    <td><%= link_to 'Destroy', entrega, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Exibir', entrega %></td>
+    <td><%= link_to 'Editar', edit_entrega_path(entrega) %></td>
+    <td><%= link_to 'Apagar', entrega, :confirm => 'Tem certeza?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
-<br />
 
-<%= link_to 'New Entrega', new_entrega_path %>

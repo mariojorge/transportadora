@@ -1,7 +1,7 @@
 <%= form_for(@motorista) do |f| %>
   <% if @motorista.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@motorista.errors.count, "error") %> prohibited this motorista from being saved:</h2>
+      <h2><%= pluralize(@motorista.errors.count, "error") %> impediram o formulário de ser salvo:</h2>
 
       <ul>
       <% @motorista.errors.full_messages.each do |msg| %>
@@ -12,14 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :nome %><br />
+    <%= f.label 'Nome:' %><br />
     <%= f.text_field :nome %>
   </div>
   <div class="field">
-    <%= f.label :telefone %><br />
+    <%= f.label "Telefone:" %><br />
     <%= f.text_field :telefone %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Salvar' %>
   </div>
 <% end %>

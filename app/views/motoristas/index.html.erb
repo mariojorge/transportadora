@@ -1,4 +1,6 @@
-<h1>Listing motoristas</h1>
+<h1>Lista de Motoristas</h1>
+
+<%= link_to 'Novo Motorista', new_motorista_path %><br />
 
 <table>
   <tr>
@@ -13,13 +15,11 @@
   <tr>
     <td><%= motorista.nome %></td>
     <td><%= motorista.telefone %></td>
-    <td><%= link_to 'Show', motorista %></td>
-    <td><%= link_to 'Edit', edit_motorista_path(motorista) %></td>
-    <td><%= link_to 'Destroy', motorista, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Exibir', motorista %></td>
+    <td><%= link_to 'Editar', edit_motorista_path(motorista) %></td>
+    <td><%= link_to 'Apagar', motorista, :confirm => 'Tem certeza?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
-<br />
 
-<%= link_to 'New Motorista', new_motorista_path %>

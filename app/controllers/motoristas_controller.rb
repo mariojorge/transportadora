@@ -1,6 +1,14 @@
 class MotoristasController < ApplicationController
   # GET /motoristas
   # GET /motoristas.xml
+
+  def disponiveis
+    @motoristas = Motorista.disponiveis(params[:data].to_date)
+    respond_to do |format|
+      format.json {render :json => @motoristas}
+    end
+  end
+
   def index
     @motoristas = Motorista.all
 

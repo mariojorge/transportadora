@@ -5,7 +5,7 @@ Transportadora::Application.routes.draw do
 
   get '/ufd/:ufd_id/cidades', :to => 'ufds#cidades'
   get '/cidade/:cidade_id/clientes', :to => 'cidades#clientes'
-  get '/entrega/:data_da_partida/motoristas', :to => 'entregas#motoristas_disponiveis'
+  get '/motoristas/:data/disponiveis', :to => 'motoristas#disponiveis'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

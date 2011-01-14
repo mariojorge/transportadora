@@ -2,19 +2,6 @@ class EntregasController < ApplicationController
   # GET /entregas
   # GET /entregas.xml
 
-  def motoristas_disponiveis
-    @motoristas = Array.new
-    data = params[:data_da_partida].to_date
-    Motorista.all.each do |motorista|
-      if motorista.disponivel?(data)
-        @motoristas << motorista
-      end
-    end
-    respond_to do |format|
-      format.json {render :json => @motoristas}
-    end
-  end  
-
   def index
     @entregas = Entrega.all
 

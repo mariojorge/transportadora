@@ -4,10 +4,12 @@
 
 <table>
   <tr>
-
+    <th width="50" align="left">Id</th>
     <th width="200" align="left">Cliente</th>
     <th width="200" align="left">Motorista</th>
+    <th width="110" align="left">Estado</th>
     <th width="110" align="left">Cidade</th>
+    <th width="110" align="left">Em andamento?</th>
     <th width="120" align="center">Data da partida</th>
     <th width="120" align="center">Data da entrega</th>
     <th width="120" align="center">Date do retorno</th>
@@ -22,16 +24,8 @@
     <td><%= entrega.cliente.nome_fantasia %></td>
     <td><%= entrega.motorista.nome %></td>
     <td><%= entrega.cidade.ufd.nome %></td>
-    <td><%= entrega.cidade.nome%></td>
-    <td><%= entrega.data_da_partida %></td>
-    <td><%= entrega.data_da_entrega %></td>
-    <td><%= entrega.data_do_retorno %></td>
-    <td><%= link_to 'Show', entrega %></td>
-    <td><%= link_to 'Edit', edit_entrega_path(entrega) %></td>
-    <td><%= link_to 'Destroy', entrega, :confirm => 'Are you sure?', :method => :delete %></td>
-    <td><% if entrega.cliente %><%= entrega.cliente.razao_social %><% end %></td>
-    <td><% if entrega.motorista %><%= entrega.motorista.nome %><% end %></td>
     <td><%= entrega.cidade.nome %></td>
+    <td><%= entrega.em_andamento? ? "Sim" : "Não" %></td>
     <td><%= entrega.data_da_partida.to_s_br %></td>
     <td><%= entrega.data_da_entrega.to_s_br %></td>
     <td><%= entrega.data_do_retorno.to_s_br %></td>

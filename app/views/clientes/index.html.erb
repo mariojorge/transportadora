@@ -4,10 +4,12 @@
 
 <table>
   <tr>
-    <th width="100" align="left">Cidade</th>
+    <th width="50" align="left">Id</th>
     <th width="170" align="left">Nome fantasia</th>
     <th width="200" align="left">Razao social</th>
     <th width="130" align="left">Cnpj</th>
+    <th width="100" align="left">Estado</th>
+    <th width="100" align="left">Cidade</th>
     <th width="200" align="left">Endereco</th>
     <th width="80" align="left">Bairro</th>
     <th width="80" align="left">Cep</th>
@@ -18,10 +20,12 @@
 
 <% @clientes.each do |cliente| %>
   <tr>
-    <td><%= cliente.cidade.nome %></td>
+    <td><%= cliente.id %></td>    
     <td><%= cliente.nome_fantasia %></td>
     <td><%= cliente.razao_social %></td>
     <td><%= cliente.cnpj %></td>
+    <td><%= cliente.cidade.ufd.nome %></td>
+    <td><%= cliente.cidade.nome %></td>
     <td><%= cliente.endereco %></td>
     <td><%= cliente.bairro %></td>
     <td><%= cliente.cep %></td>

@@ -45,3 +45,13 @@ body {
 #container {
 	margin: 10px;	
 }
+
+input {
+	padding: 3px;
+	margin-top: 4px;
+}
+
+input[type=submit] {
+	padding: 0px;
+}
+

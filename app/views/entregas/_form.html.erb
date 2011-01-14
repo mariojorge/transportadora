@@ -4,7 +4,7 @@
   
   <% if @entrega.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@entrega.errors.count, "error") %> prohibited this entrega from being saved:</h2>
+      <h2><%= pluralize(@entrega.errors.count, "error") %> impediram o formulário de ser salvo:</h2>
 
       <ul>
       <% @entrega.errors.full_messages.each do |msg| %>
@@ -15,17 +15,17 @@
   <% end %>
 
   <div class="field">  
-    <%= f.label "Estado" %><br />
+    <%= f.label "Estado:" %><br />
     <%= f.collection_select :ufd_id, Ufd.all, :id, :nome, {:prompt => "Selecione um estado"} %>
   </div>
 
   <div class="field">
-    <%= f.label :cidade_id %><br />
+    <%= f.label "Cidade:" %><br />
     <%= @entrega.new_record? ? (raw "<select id='entrega_cidade_id' name='entrega[cidade_id]' type='text'/></select>") :(f.collection_select :cidade_id, @entrega.ufd.try(:cidades), :id, :nome) %>
   </div>
 
   <div class="field">
-    <%= f.label :cliente_id %><br />
+    <%= f.label "Cliente:" %><br />
 
     <%= 
       if @entrega.new_record?
@@ -37,26 +37,26 @@
   </div>
   
   <div class="field">
-    <%= f.label :data_da_partida %><br />
+    <%= f.label "Data da partida:" %><br />
     <%= f.text_field :data_da_partida %>
   </div>
 
   <div class="field">
-    <%= f.label :data_da_entrega %><br />
+    <%= f.label "Data da entrega:" %><br />
     <%= f.text_field :data_da_entrega %>
   </div>
 
   <div class="field">
-    <%= f.label :data_do_retorno %><br />
+    <%= f.label "Data do retorno:" %><br />
     <%= f.text_field :data_do_retorno %>
   </div>
 
   <div class="field">
-    <%= f.label :motorista_id %><br />
+    <%= f.label "Motorista:" %><br />
     <select id="entrega_motorista_id" name="entrega[motorista_id]" type="text"/></select>
   </div>
   
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Salvar" %>
   </div>
 <% end %>

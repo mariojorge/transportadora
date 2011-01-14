@@ -67,7 +67,7 @@
   </div>
 
   <div class="field">
-    <%= f.label "Cidade:' %><br />
+    <%= f.label "Cidade:" %><br />
     <%= @entrega.new_record? ? (raw "<select id='entrega_cidade_id' name='entrega[cidade_id]' type='text'/></select>") :(f.collection_select :cidade_id, @entrega.ufd.try(:cidades), :id, :nome) %>
   </div>
 

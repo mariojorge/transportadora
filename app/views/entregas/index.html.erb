@@ -21,10 +21,10 @@
 <% @entregas.each do |entrega| %>
   <tr>
     <td><%= entrega.id %></td>
-    <td><%= entrega.cliente.nome_fantasia %></td>
+    <td><%= entrega.cliente.nil? ? "" : entrega.cliente.nome_fantasia %></td>
     <td><%= entrega.motorista.nome %></td>
-    <td><%= entrega.cidade.ufd.nome %></td>
-    <td><%= entrega.cidade.nome %></td>
+    <td><%= entrega.ufd.nome %></td>
+    <td><%= entrega.cidade.nil? ? "" : entrega.cidade.nome %></td>
     <td><%= entrega.em_andamento? ? "Sim" : "Não" %></td>
     <td><%= entrega.data_da_partida.to_s_br %></td>
     <td><%= entrega.data_da_entrega.to_s_br %></td>

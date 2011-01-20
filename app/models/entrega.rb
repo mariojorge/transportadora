@@ -4,6 +4,8 @@ class Entrega < ActiveRecord::Base
   belongs_to :cidade
   belongs_to :ufd
 
+  validates_presence_of :data_da_partida, :data_do_retorno, :data_da_entrega
+
   def em_andamento?
     self.data_da_partida >= Date.today && self.data_do_retorno >= Date.today ? true : false
   end

@@ -21,15 +21,15 @@
 
   <div class="field">
     <%= f.label "Cidade:" %><br />
-    <%= @entrega.new_record? ? (raw "<select id='entrega_cidade_id' name='entrega[cidade_id]' type='text'/></select>") :(f.collection_select :cidade_id, @entrega.ufd.try(:cidades), :id, :nome) %>
+    <%= @entrega.new_record? ? (raw "<select id='entrega_cidade_id' name='entrega[cidade_id]' type='text'/><option value=""></option></select>") :(f.collection_select :cidade_id, @entrega.ufd.try(:cidades), :id, :nome, :include_blank => true) %>
   </div>
 
   <div class="field">
     <%= f.label "Cliente:" %><br />
 
     <%= 
-      if @entrega.new_record?
-        raw "<select id='entrega_cliente_id' name='entrega[cliente_id]' type='text'/></select>"
+      if @entrega.new_record? || @entrega.cliente.nil?
+        raw "<select id='entrega_cliente_id' name='entrega[cliente_id]' type='text'/><option value=""></option></select>"
       else
         raw "<select id='entrega_cliente_id' name='entrega[cliente_id]' type='text'/><option value=#{@entrega.cliente_id}>#{@entrega.cliente.nome_fantasia}</option></select>" 
       end
@@ -53,7 +53,13 @@
 
   <div class="field">
     <%= f.label "Motorista:" %><br />
-    <select id="entrega_motorista_id" name="entrega[motorista_id]" type="text"/></select>
+    <%= 
+      if @entrega.new_record?
+        raw "<select id='entrega_motorista_id' name='entrega[motorista_id]' type='text'/></select>"
+      else
+        raw "<select id='entrega_motorista_id' name='entrega[motorista_id]' type='text'/><option value=#{@entrega.motorista_id}>#{@entrega.motorista.nome}</option></select>" 
+      end
+    %>
   </div>
   
   <div class="actions">
